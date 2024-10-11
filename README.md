@@ -74,3 +74,30 @@ Provides a GUI for users to input new contact details.
 Conclusion
 
 This Java PhoneBook application is designed for ease of use and provides essential functionalities for managing personal contacts effectively. By following this README, users should be able to set up and operate the application without difficulty.
+
+
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
