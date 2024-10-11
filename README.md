@@ -54,22 +54,53 @@ Displaying All Contacts: Click "Show All" to view all saved contacts in a new wi
 Code Explanation
 
 Main Class
-The Main class initializes the application by creating an instance of LaunchPage.
+Functionality: The Main class serves as the entry point of the application. It initializes the LaunchPage, which is the first screen users see when they start the application.
 
 LaunchPage Class
-This class sets up the initial GUI with a button to open the main application.
+Purpose: This class creates the initial GUI for the application.
+Components:
+JFrame: The main window where the welcome message and button are displayed.
+JButton: A button labeled "Open" that transitions to the main application.
+JLabel: Displays the title "InterCell PhoneBook".
+Constructor: Sets up button properties, label styles, and frame settings. The button click event is handled to open the main application and close the welcome screen.
 
 MainApp Class
-This class manages all functionalities related to contact management, including adding, searching, editing, and deleting contacts.
-
-ContactManager Class
-Handles operations on an ArrayList of Contact objects, including searching using binary search and sorting using selection sort.
+Purpose: This class serves as the main interface for managing contacts.
+Components:
+JFrame: The main menu window where all contact management options are presented.
+JButtons: Buttons for adding, searching, deleting, editing contacts, and showing all contacts.
+JLabel: Displays "InterCell" as a title.
+Constructor: Initializes ContactManager and sets up GUI elements.
+Methods:
+initializeComponents(): Configures buttons and labels for interaction.
+actionPerformed(): Handles button clicks to invoke respective functionalities like adding or searching contacts.
 
 Contact Class
-Represents individual contacts with attributes for full name and phone number.
+Purpose: Represents an individual contact with attributes for full name and phone number.
+Attributes:
+fullName: The name of the contact.
+phoneNumber: The contact's phone number.
+Methods:
+Getters and setters allow access to these attributes, while toString() provides a string representation for easy display.
+
+ContactManager Class
+Purpose: Manages a list of contacts with functionalities such as adding, searching, deleting, updating, and sorting contacts.
+Attributes:
+contacts: An ArrayList storing all contact objects.
+Methods:
+insertContact(): Adds a new contact to the list.
+searchContact(): Searches for a contact using binary search; sorts contacts before searching to ensure efficiency.
+deleteContact(): Removes a contact by name after locating it with binary search.
+updateContact(): Updates an existing contact's phone number based on their name.
+sortContacts(): Sorts contacts using selection sort based on their names.
 
 AddPerson Class
-Provides a GUI for users to input new contact details.
+Purpose: Provides a GUI for adding a new contact to the contact manager.
+Components:
+JTextField: For entering name and phone number inputs.
+JButton: For submitting new contact information.
+Constructor: Sets up GUI elements and their layout. It also centers this window relative to the main menu.
+ActionListener: Handles submission of contact details, ensuring both fields are filled before adding to the manager.
 
 Conclusion
 
