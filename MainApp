@@ -1,15 +1,18 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Comparator;
+
 public class Main{
     public static void main(String[]args){
         LaunchPage launchPage = new LaunchPage();
     }
 }
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class LaunchPage implements ActionListener {
+class LaunchPage implements ActionListener {
     JFrame frame = new JFrame();
     JButton myButton = new JButton("Open");
     JLabel Text = new JLabel("InterCell PhoneBook", JLabel.CENTER);
@@ -48,14 +51,9 @@ public class LaunchPage implements ActionListener {
 
 }
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Comparator;
 
-public class MainApp implements ActionListener {
+
+class MainApp implements ActionListener {
     private JFrame mainMenu;
     private JButton addPersonButton;
     private JButton searchButton;
@@ -419,6 +417,3 @@ public class MainApp implements ActionListener {
         SwingUtilities.invokeLater(() -> new MainApp());
     }
 }
-
-
-
